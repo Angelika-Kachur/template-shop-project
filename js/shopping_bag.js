@@ -38,10 +38,8 @@ getTotalPrice();
 function getTotalCount() {
     let totalCount = 0;
     if(storage.getItem("productsOrder")) {
-        let localCount = 0;
         cartDataArray.forEach(function(product) {
-            localCount = parseInt(product.count);
-            totalCount += localCount;
+            totalCount += parseInt(product.count);
         })
     }
     let parent = document.querySelector('.header_shopping_bag .count');
@@ -177,7 +175,71 @@ if(document.body.contains(document.querySelector("#buy_now"))) {
 };
 
 
-//Remove One Product From Cart
+
+function setAmountProduct(sign) {
+    let product = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+    let productId = product.getAttribute("id").replace("item_", "");
+
+    cartData = storage.getItem("productsOrder");
+
+    function findElem(elem) {
+        return elem.id == productId;
+    }
+
+    let findProduct = cartDataArray.find(findElem);
+    let newProduct = Object.assign({}, findProduct);
+    newProduct.count = newProduct.count + sign;
+    if(newProduct.count < 0) {
+        newProduct.count = 0;
+    }
+    cartData = cartData.replace(JSON.stringify(findProduct), JSON.stringify(newProduct));
+    return(cartData);
+}
+
+//Plus One Product in Cart
+if(document.body.contains(document.querySelector(".bag_items"))) {
+    let bagItemsBox = document.querySelector('.bag_items');
+    bagItemsBox.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if(event.target.classList.contains("plus")) {
+            
+            cartData = setAmountProduct(+1);
+            storage.setItem("productsOrder", cartData);
+          
+            //change price and count
+            getTotalPrice();
+            getTotalCount();
+
+            let compiledBagProducts = _.template(templateBagProducts, {products: products});
+            document.querySelector('#bag_items_box').innerHTML = compiledBagProducts;
+        }
+    });
+}
+
+//Minus One Product in Cart
+if(document.body.contains(document.querySelector(".bag_items"))) {
+    let bagItemsBox = document.querySelector('.bag_items');
+    bagItemsBox.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if(event.target.classList.contains("minus")) {
+
+            cartData = setAmountProduct(-1);
+            storage.setItem("productsOrder", cartData);
+            
+            //change price and count
+            getTotalPrice();
+            getTotalCount();
+
+            let compiledBagProducts = _.template(templateBagProducts, {products: products});
+            document.querySelector('#bag_items_box').innerHTML = compiledBagProducts;
+        }
+    });
+}
+
+
+// Remove One Product From Cart
 if(document.body.contains(document.querySelector(".bag_items"))) {
     let bagItemsBox = document.querySelector('.bag_items');
     bagItemsBox.addEventListener("click", function(event) {
