@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Angelika Kachur">
+  <meta name="description" content="Final Task January 2018">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="data/catalog.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.9.0/lodash.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="main_holder">
+
+      <!-- Header Top-->
+      <div class="header_top">
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="start.html">
+            <span class="logo_desktop">Template</span>
+            <span class="logo_mobile">TL</span>
+          </a>
+        </div>
+        <!-- END Logo -->
+
+        <!-- Burger Menu -->
+        <div class="burger_menu">
+          <div class="burger_menu_btn">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+          </div>
+        </div>
+        <!-- END Burger Menu -->
+
+         <!-- User Box -->
+         <div class="user_box">
+          <div class="sign_up">
+            <a href="#">E-mail sing up</a>
+          </div>
+          <div class="header_shopping_bag">
+            <a href="shopping_bag.html">
+              <span class="icon-bag"></span>
+              Bag
+              <span class="price"><span class="value"></span></span>
+              <span class="count"><span class="value">0</span></span>
+            </a>
+          </div>
+        </div>
+        <!-- END User Box -->
+
+      </div>
+      <!-- END Header Top -->
+
+      <!-- Header Bottom -->
+      <div class="header_bottom">
+
+        <!-- Navigation -->
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Handbags</a>
+            </li>
+            <li>
+              <a href="#">Accessories</a>
+            </li>
+            <li>
+              <a href="#">Sale</a>
+            </li>
+            <li>
+              <a href="#">New Arrivals</a>
+            </li>
+            <li>
+              <a href="#">Clearance</a>
+            </li>
+            <li>
+              <a href="#">Store Locator</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- END Navigation -->
+
+        <div class="search">
+          <span class="icon icon-search search_open_btn"></span>
+          <div class="search_input_hold">
+              <input class="search_input" type="search" placeholder="Style Name">
+              <span class="icon icon-search search_btn"></span>
+          </div>
+        </div>
+
+      </div>
+      <!-- END Header Bottom -->
+
+    </div>
+  </header>
+  <!-- END Header -->
+
+  <!-- Slider -->
+  <section class="home_slider">
+    <div class="slider" id="home_slider">
+      <div class="home_slide">
+        <a href="catalog.html">
+          <img src="img/slider_img_1.jpg" alt="Slider Photo"> 
+        </a>
+      </div>
+      <div class="home_slide">
+        <a href="item.html?id=014c271a-2811-47fc-b63f-ba279a4ec830">
+          <img src="img/slider_img_2.jpg" alt="Slider Photo"> 
+        </a>
+      </div>
+      <div class="home_slide">
+        <a href="catalog.html">
+          <img src="img/slider_img_5.jpg" alt="Slider Photo"> 
+        </a>
+      </div>
+      <div class="home_slide">
+        <a href="item.html?id=014c271a-2811-47fc-b63f-ba279a4ec830">
+          <img src="img/slider_img_4.jpg" alt="Slider Photo"> 
+        </a>
+      </div>
+    </div>
+    <div class="controls_arrows">
+      <a href="#" class="prev" id="home_slider_prev"></a>
+      <a href="#" class="next" id="home_slider_next"></a>
+    </div>
+    <div id="controls_dots">
+      <!-- <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span> -->
+    </div>
+  </section>
+  <!-- END Slider -->
+
+  <!-- Banner -->
+  <section class="home_banner banner">
+    <div class="banner_item">
+      <a href="item.html?id=014c271a-2811-47fc-b63f-ba279a4ec830">
+        <img src="img/banner_img_1.jpg" alt="Banner Image">
+        <div class="text">
+          <div class="title">Nike Red</div>
+          <div class="info">New</div>
+        </div>
+      </a>
+    </div>
+    <div class="banner_item only_desktop">
+      <a href="catalog.html">
+        <img src="img/banner_img_2.jpg" alt="Banner Image">
+        <div class="text">
+          <div class="title">Caps &amp; Hats</div>
+          <div class="info">Sale -50%</div>
+        </div>
+      </a>
+    </div>
+    <div class="banner_item only_tablet pink center_text">
+      <a href="catalog.html">
+        <img src="img/banner_img_3.jpg" alt="Banner Image">
+        <div class="text">
+          <div class="title">Sale</div>
+          <div class="info">-70%</div>
+        </div>
+      </a>
+    </div>
+  </section>
+  <!-- END Banner -->
+
+  <!-- New Arrivals -->
+  <section class="new_arrivals">
+    <div class="main_holder">
+      <div class="main_title">
+          New arrivals
+      </div>
+      <div class="products" id="products_new_arrivals">
+        <!-- <div class="product">
+          <a href="#" class="link">
+            <div class="image">
+                <img src="img/model_img_1.jpg" alt="New Arrivals Image">
+            </div>
+            <div class="text">
+              <div class="title">Only Skinny Jeans</div>
+              <div class="info">
+                <span class="price">£65.50</span>
+              </div>
+            </div>
+          </a>
+        </div> -->
+      </div>
+      <div class="btn_box">
+        <a href="catalog.html" class="btn">All arrivals</a>
+      </div>
+    </div>
+  </section>
+  <!-- END Banner -->
+
+  <!-- Top Footer -->
+  <div class="top_footer">
+    <div class="main_holder">
+      <div class="block left_block">
+        <nav class="top_foo_nav">
+          <div class="title">
+              Quick Links
+          </div>
+          <ul>
+            <li>
+              <a href="#">Store locator</a>
+            </li>
+            <li>
+              <a href="#">Gift cards</a>
+            </li>
+            <li>
+              <a href="#">Size guide</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="top_foo_nav">
+          <div class="title">
+              Customer Care
+          </div>
+          <ul>
+            <li>
+              <a href="#">Customer service</a>
+            </li>
+            <li>
+              <a href="#">Track my order</a>
+            </li>
+            <li>
+              <a href="#">Return policy</a>
+            </li>
+            <li>
+              <a href="#">Shipping &amp; delivery</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="block right_block">
+        <div class="foo_links">
+          <div class="top_foo_nav">
+              <div class="title">
+                  Quick Links
+              </div>
+              <a href="#" class="twitter_link">
+                <span class="icon-twitter"></span>
+                Tweet us <b>@template</b>
+              </a>
+            </div>
+    
+            <div class="top_foo_nav">
+              <div class="title">
+                  Order by phone
+              </div>
+              <a href="tel:88004094712">8-800-409-47-12</a>
+            </div>
+        </div>
+
+        <div class="description">
+          We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.
+        </div>
+
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <span class="icon-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon-twitter"></span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- END Top Footer -->
+    
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="top_block">
+      <div class="main_holder">
+        <nav class="footer_nav">
+          <ul>
+            <li>
+              <a href="#">Legal notice</a>
+            </li>
+            <li>
+              <a href="#">Privacy policy</a>
+            </li>
+            <li>
+              <a href="#">Site map</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <span class="icon-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon-twitter"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom_block">
+      <div class="main_holder">
+        <div class="rights_box">
+          © 2010–2015, <a href="#">The Template Group inc</a>.
+        </div>
+        <nav class="footer_nav">
+          <ul>
+            <li>
+              <a href="#">Legal notice</a>
+            </li>
+            <li>
+              <a href="#">Privacy policy</a>
+            </li>
+            <li>
+              <a href="#">Site map</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="share_box">
+          Share <span class="count">1 437</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END Footer -->
+
+  <script src="js/url_polyfill.js"></script>
+  <script src="js/home_slider.js"></script>
+  <script src="js/lodash_product_template.js"></script>
+  <script src="js/products_start_page.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/shopping_bag.js"></script>
+
+</body>
+
+</html>

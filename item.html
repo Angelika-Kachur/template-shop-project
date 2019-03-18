@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Angelika Kachur">
+  <meta name="description" content="Final Task January 2018">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="data/catalog.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.9.0/lodash.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="main_holder">
+
+      <!-- Header Top-->
+      <div class="header_top">
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="start.html">
+            <span class="logo_desktop">Template</span>
+            <span class="logo_mobile">TL</span>
+          </a>
+        </div>
+        <!-- END Logo -->
+
+        <!-- Burger Menu -->
+        <div class="burger_menu">
+          <div class="burger_menu_btn">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+          </div>
+        </div>
+        <!-- END Burger Menu -->
+
+         <!-- User Box -->
+         <div class="user_box">
+          <div class="sign_up">
+            <a href="#">E-mail sing up</a>
+          </div>
+          <div class="header_shopping_bag">
+            <a href="shopping_bag.html">
+              <span class="icon-bag"></span>
+              Bag
+              <span class="price"><span class="value"></span></span>
+              <span class="count"><span class="value">0</span></span>
+            </a>
+          </div>
+        </div>
+        <!-- END User Box -->
+
+      </div>
+      <!-- END Header Top -->
+
+      <!-- Header Bottom -->
+      <div class="header_bottom">
+
+        <!-- Navigation -->
+        <nav class="navigation">
+          <ul>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Handbags</a>
+            </li>
+            <li>
+              <a href="#">Accessories</a>
+            </li>
+            <li>
+              <a href="#">Sale</a>
+            </li>
+            <li>
+              <a href="#">New Arrivals</a>
+            </li>
+            <li>
+              <a href="#">Clearance</a>
+            </li>
+            <li>
+              <a href="#">Store Locator</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- END Navigation -->
+
+        <div class="search">
+          <span class="icon icon-search search_open_btn"></span>
+          <div class="search_input_hold">
+              <input class="search_input" type="search" placeholder="Style Name">
+              <span class="icon icon-search search_btn"></span>
+          </div>
+        </div>
+
+      </div>
+      <!-- END Header Bottom -->
+
+    </div>
+  </header>
+  <!-- END Header -->
+
+  <!-- Main Top Title -->
+  <div class="main_top_title">
+    <div class="main_holder">
+      <a href="catalog.html">&lt; Back to catalog</a>
+    </div>
+  </div>
+  <!-- END Main Top Title -->
+
+  <!-- Product Details -->
+  <div class="main_holder">
+    <div class="product_details" id="product_details">
+      <!-- <div class="product_slider" id="product_slider_section">
+        <div class="slider" id="product_slider">
+          <div class="product_slide active">
+            <img class="big_img" src="img/item_slider_img_1.jpg">
+          </div>
+          <div class="product_slide">
+            <img class="big_img" src="img/item_slider_img_1.jpg">
+          </div>
+          <div class="product_slide">
+            <img class="big_img" src="img/item_slider_img_1.jpg">
+          </div>
+        </div>
+        <ul class="product_slider_previews" id="product_slider_previews">
+          <li class="preview">
+            <img class="preview" src="img/item_slider_img_1.jpg">
+          </li>
+          <li class="preview">
+            <img class="preview" src="img/item_slider_img_1.jpg">
+          </li>
+          <li class="preview">
+            <img class="preview" src="img/item_slider_img_1.jpg">
+          </li>
+        </ul>
+      </div>
+      <div class="product_info">
+        <div class="title_box">
+          Dark classic fit suit
+        </div>
+        <div class="price_box only_tablet">
+          <span>£</span>
+          <span class="price">180.60</span>
+        </div>
+        <div class="description_box">
+          Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs
+          and a subtle stripe pattern throughout. 
+        </div>
+        <div class="price_box only_desktop">
+            <span>£</span>
+            <span class="price">180.60</span>
+          </div>
+        <div class="filter_box size_box">
+          <div class="filter_title">
+            Size:
+          </div>
+          <div class="filter_options">
+            <div class="filter_option">
+              <input type="radio" name="size" id="size_uk_52" checked>
+              <label for="size_uk_52">UK 52</label>
+            </div>
+            <div class="filter_option">
+              <input type="radio" name="size" id="size_uk_54">
+              <label for="size_uk_54">UK 54</label>
+            </div>
+            <div class="filter_option">
+              <input type="radio" name="size" id="size_uk_56">
+              <label for="size_uk_56">UK 56</label>
+            </div>
+          </div>
+        </div>
+        <div class="filter_box color_box">
+          <div class="filter_title">
+            Color:
+          </div>
+          <div class="filter_options">
+            <div class="filter_option">
+              <input type="radio" name="color" id="color_black">
+              <label  for="color_black">Black</label>
+            </div>
+            <div class="filter_option">
+              <input type="radio" name="color" id="color_blue" checked>
+              <label for="color_blue">Blue</label>
+            </div>
+          </div>
+        </div>
+        <div class="btn_box">
+          <button class="btn">Add to bag</button>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- END Product Details -->
+
+  <!-- Banner -->
+  <section class="catalog_banner banner">
+    <div class="holder">
+      <div class="banner_item white">
+        <a href="#">
+          <img src="img/banner_img_4.jpg" alt="Banner Image">
+          <div class="text">
+            <div class="title">Adidas Blue</div>
+            <div class="info">For men</div>
+          </div>
+        </a>
+      </div>
+      <div class="banner_item  center_text white">
+        <a href="#">
+          <img src="img/banner_img_5.jpg" alt="Banner Image">
+          <div class="text">
+            <div class="title">Repair Patches</div>
+            <div class="info">£ 150.50</div>
+          </div>
+        </a>
+      </div>
+      <div class="banner_item center_text pink">
+        <a href="#">
+          <img src="img/banner_img_3.jpg" alt="Banner Image">
+          <div class="text">
+            <div class="title">Sale</div>
+            <div class="info">-70%</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- END Banner -->
+
+  <!-- Top Footer -->
+  <div class="top_footer">
+    <div class="main_holder">
+      <div class="block left_block">
+        <nav class="top_foo_nav">
+          <div class="title">
+              Quick Links
+          </div>
+          <ul>
+            <li>
+              <a href="#">Store locator</a>
+            </li>
+            <li>
+              <a href="#">Gift cards</a>
+            </li>
+            <li>
+              <a href="#">Size guide</a>
+            </li>
+            <li>
+              <a href="#">About us</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="top_foo_nav">
+          <div class="title">
+              Customer Care
+          </div>
+          <ul>
+            <li>
+              <a href="#">Customer service</a>
+            </li>
+            <li>
+              <a href="#">Track my order</a>
+            </li>
+            <li>
+              <a href="#">Return policy</a>
+            </li>
+            <li>
+              <a href="#">Shipping &amp; delivery</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="block right_block">
+        <div class="foo_links">
+          <div class="top_foo_nav">
+              <div class="title">
+                  Quick Links
+              </div>
+              <a href="#" class="twitter_link">
+                <span class="icon-twitter"></span>
+                Tweet us <b>@template</b>
+              </a>
+            </div>
+    
+            <div class="top_foo_nav">
+              <div class="title">
+                  Order by phone
+              </div>
+              <a href="tel:88004094712">8-800-409-47-12</a>
+            </div>
+        </div>
+
+        <div class="description">
+          We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.
+        </div>
+
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <span class="icon-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon-twitter"></span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- END Top Footer -->
+    
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="top_block">
+      <div class="main_holder">
+        <nav class="footer_nav">
+          <ul>
+            <li>
+              <a href="#">Legal notice</a>
+            </li>
+            <li>
+              <a href="#">Privacy policy</a>
+            </li>
+            <li>
+              <a href="#">Site map</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <span class="icon-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon-twitter"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom_block">
+      <div class="main_holder">
+        <div class="rights_box">
+          © 2010–2015, <a href="#">The Template Group inc</a>.
+        </div>
+        <nav class="footer_nav">
+          <ul>
+            <li>
+              <a href="#">Legal notice</a>
+            </li>
+            <li>
+              <a href="#">Privacy policy</a>
+            </li>
+            <li>
+              <a href="#">Site map</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="share_box">
+          Share <span class="count">1 437</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END Footer -->
+
+  <!-- Product Slider Template -->
+  <script type="text/template" id="productSliderTemplate">
+
+    <div class="product_slider" id="product_slider_section">
+      <div class="slider" id="product_slider">
+        <% for(var i = 0; i < currentProduct.preview.length; i++) { %>
+          <div class="product_slide">
+            <img src="<%-currentProduct.preview[i]%>" alt="Image">
+          </div>
+        <% } %>
+      </div>
+      <ul class="product_slider_previews" id="product_slider_previews">
+        <% for(var i = 0; i < currentProduct.preview.length; i++) { %>
+          <li class="preview">
+            <img src="<%-currentProduct.preview[i]%>" alt="Image">
+          </li>
+        <% } %>
+      </ul>
+    </div>
+    <div class="product_info">
+      <div class="title_box"><%-currentProduct.title%></div>
+      <div class="price_box only_tablet">
+        <span>£</span><span class="price"><%-currentProduct.discountedPrice%></span>
+      </div>
+      <div class="description_box"><%-currentProduct.description%></div>
+      <div class="price_box only_desktop">
+          <span>£</span><span class="price"><%-currentProduct.discountedPrice%></span>
+      </div>
+      <div class="filter_box size_box">
+        <div class="filter_title">
+          Size:
+        </div>
+        <div class="filter_options">
+          <% for(var i = 0; i < currentProduct.sizes.length; i++) { %>
+            <div class="filter_option">
+              <input type="radio" name="size" id="<%-currentProduct.sizes[i]%>">
+              <label for="<%-currentProduct.sizes[i]%>"><%-currentProduct.sizes[i]%></label>
+            </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="filter_box color_box">
+        <div class="filter_title">
+          Color:
+        </div>
+        <div class="filter_options">
+          <% for(var i = 0; i < currentProduct.colors.length; i++) { %>
+            <div class="filter_option">
+              <input type="radio" name="color" id="<%-currentProduct.colors[i]%>">
+              <label  for="<%-currentProduct.colors[i]%>"><%-currentProduct.colors[i]%></label>
+            </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="btn_box">
+        <button class="btn" id="add_to_bag_btn">Add to bag</button>
+      </div>
+    </div>
+  </script>
+  <!-- END Catalog Products Template -->
+
+
+  <script src="js/url_polyfill.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/products_item_page.js"></script>
+  <script src="js/item_details_slider.js"></script>
+  <script src="js/shopping_bag.js"></script>
+
+</body>
+
+</html>
